@@ -51,6 +51,38 @@
 // }
 
 
+// let country = 'Portugal'
+// let population = 45000000;
+// let language = 'Spanish';
+// let isIsland = true;
+
+// if (country === 'Portugal' && population < 50000000 && language === 'English' && isIsland === true) {
+//     console.log(`You should live in ${country}`);
+// } else {
+//     console.log(`${country} does not meet your criteria:(`);
+// }
+
+let language = "asda";
+
+switch (language) {
+    case "chinese":
+        console.log("'MOST number of native speakers!'");
+        break;
+    case "spanish":
+        console.log("'2nd place in number of native speakers");
+        break;
+    case "english":
+        console.log("3rd place");
+        break;
+    case "hindi":
+        console.log("'Number 4");
+        break;
+    case "arabic":
+        console.log("5th most spoken language");
+        break;
+    default:
+        console.log("Great language too :D");
+}
 
 
 
@@ -143,7 +175,49 @@ console.log("John's BMI is higher than Mark's");
 console.log("Mark's BMI " + markBMI + " is higher than " + johnBMI);
 */
 
-const hasDriversLicense = true;
-const hasGoodVision = true;
+// const hasDriversLicense = true;
+// const hasGoodVision = true;
 
-console.log(hasDriversLicense && hasGoodVision);
+// console.log(hasDriversLicense && hasGoodVision);
+
+// const score1Dolphins = 97;
+// const score2Dolphins = 112;
+// const score3Dolphins = 101;
+
+// const score1Koalas = 109;
+// const score2Koalas = 95;
+// const score3Koalas = 106;
+
+// let avgDolphins;
+// let avgKoalas;
+
+// avgDolphins = (score1Dolphins + score2Dolphins + score3Dolphins) / 3;
+
+// avgKoalas = (score1Koalas + score2Koalas + score3Koalas) / 3;
+
+// if (avgDolphins > avgKoalas && avgDolphins > 100) {
+//     console.log(`Dolphins are the winners`);
+// } else if (avgDolphins < avgKoalas && avgKoalas > 100) {
+//     console.log(`Koalas are the winners`);
+// } else if (avgDolphins === avgKoalas && avgDolphins > 100 && avgKoalas > 100) {
+//     console.log(`There is a draw. Both win the trophy`);
+// } else {
+//     console.log(`No one wins the trophy`);
+// }
+
+// let day = "wednesday";
+
+// if (day === "Monday") {
+//     console.log('Plan Course structure');
+//     console.log('Go to coding meetup');
+// } else if (day === "tuesday") {
+//     console.log('Prepare theory videos');
+// } else if (day === 'wednesday' || day === 'thursday') {
+//     console.log('write code examples')
+// } else if (day === "friday") {
+//     console.log('Record videos');
+// } else if (day === "saturday" || day === "sunday") {
+//     console.log("enjoy the weekend");
+// } else {
+//     console.log("Not a valid day!");
+// }
