@@ -62,29 +62,37 @@
 //     console.log(`${country} does not meet your criteria:(`);
 // }
 
-let language = "asda";
+// let language = "asda";
 
-switch (language) {
-    case "chinese":
-        console.log("'MOST number of native speakers!'");
-        break;
-    case "spanish":
-        console.log("'2nd place in number of native speakers");
-        break;
-    case "english":
-        console.log("3rd place");
-        break;
-    case "hindi":
-        console.log("'Number 4");
-        break;
-    case "arabic":
-        console.log("5th most spoken language");
-        break;
-    default:
-        console.log("Great language too :D");
-}
+// switch (language) {
+//     case "chinese":
+//         console.log("'MOST number of native speakers!'");
+//         break;
+//     case "spanish":
+//         console.log("'2nd place in number of native speakers");
+//         break;
+//     case "english":
+//         console.log("3rd place");
+//         break;
+//     case "hindi":
+//         console.log("'Number 4");
+//         break;
+//     case "arabic":
+//         console.log("5th most spoken language");
+//         break;
+//     default:
+//         console.log("Great language too :D");
+// }
 
 
+// const population = 3500000000;
+// // console.log(`Portugal's population is ${population >= 3300000 ? 'above average' : 'below average'}`);
+
+
+// // const result = population >= 33000000 ? 'above average' : 'below average';
+// // console.log(result);
+
+// console.log(`${country}'s population is ${population > 33 ? 'above' : 'below'} average`);
 
 //----------------------------------------------//
 /*
@@ -200,7 +208,7 @@ console.log("Mark's BMI " + markBMI + " is higher than " + johnBMI);
 // } else if (avgDolphins < avgKoalas && avgKoalas > 100) {
 //     console.log(`Koalas are the winners`);
 // } else if (avgDolphins === avgKoalas && avgDolphins > 100 && avgKoalas > 100) {
-//     console.log(`There is a draw. Both win the trophy`);
+//     console.log(`There is a draw.Both win the trophy`);
 // } else {
 //     console.log(`No one wins the trophy`);
 // }
@@ -221,3 +229,20 @@ console.log("Mark's BMI " + markBMI + " is higher than " + johnBMI);
 // } else {
 //     console.log("Not a valid day!");
 // }
+
+
+
+// if (bill > 50 && bill < 300) {
+//     tip = bill * 0.15;
+//     console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`);
+// } else {
+//     tip = bill * 0.2;
+//     console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`);
+// }
+
+// const bill = 275;
+// let tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
+
+// const totalValue = (`The bill was ${bill}, and the tip was ${tip}, and the total value ${bill + tip}`);
+
+// console.log(totalValue);
