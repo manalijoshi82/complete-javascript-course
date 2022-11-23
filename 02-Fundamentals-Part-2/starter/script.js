@@ -22,11 +22,11 @@
 // console.log(result1);
 // console.log(result2);
 
-// function percentageOfWorld1(population) {
-//     const worldPopulation = 7900000000;
-//     const percentage = (population / worldPopulation) * 100
-//     return Math.round(percentage);
-// }
+function percentageOfWorld1(population) {
+    const worldPopulation = 7900000000;
+    const percentage = (population / worldPopulation) * 100
+    return Math.round(percentage);
+}
 
 // const populationIndia = percentageOfWorld1(1412979781);
 // const populationUSA = percentageOfWorld1(335773639);
@@ -83,26 +83,75 @@
 // const koalaScore3 = 49;
 
 
-const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
-// console.log(calcAverage(3, 4, 5));
+// const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
+// // console.log(calcAverage(3, 4, 5));
 
-let scoreDolphins = calcAverage(44, 23, 71);
-let scoreKoalas = calcAverage(65, 54, 49);
+// let scoreDolphins = calcAverage(44, 23, 71);
+// let scoreKoalas = calcAverage(65, 54, 49);
 
 
-function checkWinner(avgDolphins, avgKoalas) {
-    if (avgDolphins >= avgKoalas * 2) {
-        console.log(`Dolphins win ${avgDolphins} vs. ${avgKoalas}`);
-    } else if (avgKoalas >= avgDolphins * 2) {
-        console.log(`Koalas win ${avgKoalas} vs. ${avgDolphins}`);
+// function checkWinner(avgDolphins, avgKoalas) {
+//     if (avgDolphins >= avgKoalas * 2) {
+//         console.log(`Dolphins win ${avgDolphins} vs. ${avgKoalas}`);
+//     } else if (avgKoalas >= avgDolphins * 2) {
+//         console.log(`Koalas win ${avgKoalas} vs. ${avgDolphins}`);
+//     } else {
+//         console.log(`No team wins`);
+//     }
+// }
+
+// checkWinner(scoreDolphins, scoreKoalas);
+// scoreDolphins = calcAverage(85, 54, 41);
+// scoreKoalas = calcAverage(23, 34, 27);
+
+// console.log(scoreDolphins, scoreKoalas);
+// checkWinner(scoreDolphins, scoreKoalas);
+
+// const populations = [1412979781, 335773639, 1412979781, 2412979781];
+
+// if (populations.length === 4) {
+//     console.log(true);
+// } else {
+//     console.log(false);
+// }
+
+// const percentages = [
+//     percentageOfWorld1(populations[0]),
+//     percentageOfWorld1(populations[1]),
+//     percentageOfWorld1(populations[2]),
+//     percentageOfWorld1(populations[3])
+// ];
+
+// const neighbours = ["Nepal", "Pakistan", "Aphganistan", "China", "Bhutan"];
+
+// neighbours.push('Utopia');
+// console.log(neighbours);
+// neighbours.pop();
+// console.log(neighbours);
+
+// if (neighbours.includes !== "Germany") {
+//     console.log(`Probably not a central European country :D`);
+// }
+
+// if (neighbours.includes("China")) {
+//     neighbours[neighbours.indexOf("China")] = "Republic of China";
+//     console.log(neighbours);
+// }
+
+function calcTip(billValue) {
+    if (billValue >= 50 && billValue <= 300) {
+        return billValue * 0.15;
     } else {
-        console.log(`No team wins`);
+        return billValue * 0.2
     }
 }
 
-checkWinner(scoreDolphins, scoreKoalas);
-scoreDolphins = calcAverage(85, 54, 41);
-scoreKoalas = calcAverage(23, 34, 27);
+const bills = [125, 555, 44];
 
-console.log(scoreDolphins, scoreKoalas);
-checkWinner(scoreDolphins, scoreKoalas);
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+console.log(tips);
+
+const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2],]
+console.log(total);
+
+console.log(tips[0], total[0], tips[1], total[1], tips[2], total[2]);
