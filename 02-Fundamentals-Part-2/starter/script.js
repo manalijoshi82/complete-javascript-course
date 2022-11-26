@@ -22,11 +22,11 @@
 // console.log(result1);
 // console.log(result2);
 
-function percentageOfWorld1(population) {
-    const worldPopulation = 7900000000;
-    const percentage = (population / worldPopulation) * 100
-    return Math.round(percentage);
-}
+// function percentageOfWorld1(population) {
+//     const worldPopulation = 7900000000;
+//     const percentage = (population / worldPopulation) * 100
+//     return Math.round(percentage);
+// }
 
 // const populationIndia = percentageOfWorld1(1412979781);
 // const populationUSA = percentageOfWorld1(335773639);
@@ -138,6 +138,175 @@ function percentageOfWorld1(population) {
 //     console.log(neighbours);
 // }
 
+// function calcTip(billValue) {
+//     if (billValue >= 50 && billValue <= 300) {
+//         return billValue * 0.15;
+//     } else {
+//         return billValue * 0.2
+//     }
+// }
+
+// const bills = [125, 555, 44];
+
+// const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+// console.log(tips);
+
+// const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2],]
+// console.log(total);
+
+// console.log(tips[0], total[0], tips[1], total[1], tips[2], total[2]);
+
+// const myCountry = {
+//     country: "USA",
+//     capital: "Washington DC",
+//     language: "English",
+//     population: 335773639,
+//     neighbours: ["Canada", "Mexico", "Cuba", "Bahamas"],
+
+//     describe: function () {
+//         return `${this.country} has ${this.language} speaking people, ${this.neighbours.length} neighbouring countries and a capital called, ${this.capital};`
+//     },
+
+//     checkIsIland: function () {
+//         isIsland: return `${this.neighbours.length === 0 ? true : false}`;
+//     }
+// };
+
+// console.log(myCountry.describe());
+// console.log(myCountry.checkIsIland());
+
+// console.log(`${myCountry.country} has ${myCountry.language} speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called , ${myCountry.capital}.`);
+
+// myCountry.population = 535773639;
+// console.log(myCountry.population);
+
+// myCountry.population = 435773639;
+// console.log(myCountry);
+
+// const jonas = {
+//     firstName: 'Jonas',
+//     lastName: 'Schmedtmann',
+//     age: 2037 - 1991,
+//     job: 'teacher',
+//     friends: ["Michael", 'Peter', 'Steven']
+// };
+
+// console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
+
+
+// const jonas = {
+//     firstName: 'Jonas',
+//     lastName: 'Schmedtmann',
+//     birthYear: 1991,
+//     job: 'teacher',
+//     friends: ["Michael", 'Peter', 'Steven'],
+//     hasDriversLicense: true,
+//     calcAge: function () {
+//         this.age = 2037 - this.birthYear;
+//         return this.age;
+//     },
+
+//     getSummary: function () {
+//         return `${this.firstName} is a ${this.calcAge()} years old ${this.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license`;
+//     }
+// };
+
+// console.log(jonas.getSummary());
+
+// const mark = {
+//     fullName: 'Mark Miller',
+//     mass: 78,
+//     height: 1.69,
+
+//     calcBMI: function () {
+//         this.BMI = this.mass / this.height ** 2;
+//         return mark.BMI;
+//     }
+// };
+
+// const john = {
+//     fullName: 'John Smith',
+//     mass: 92,
+//     height: 1.95,
+
+//     calcBMI: function () {
+//         this.BMI = this.mass / this.height ** 2;
+//         return john.BMI;
+//     }
+// };
+
+// console.log(mark.calcBMI());
+// console.log(john.calcBMI());
+
+
+// if (mark.BMI > john.BMI) {
+//     console.log(`${mark.fullName}'s BMI (${mark.BMI}) is higher than ${john.fullName}'s BMI ${john.BMI}
+//     `)
+// } else if (john.BMI > mark.BMI) {
+//     console.log(`${john.fullName}'s BMI ${john.BMI}) is higher than ${mark.fullName}'s BMI $ {mark.BMI}`)
+// }
+
+
+//Loops
+// for (let count = 1; count <= 50; count++) {
+//     console.log(`Voter number ${count} is currently voting`);
+// }
+
+
+
+// const populations = [1412979781, 335773639, 1412979781, 2412979781];
+
+// function percentageOfWorld1(population) {
+//     const worldPopulation = 7900000000;
+//     const percentage = (population / worldPopulation) * 100
+//     return (percentage);
+// }
+
+// const percentages = [
+//     percentageOfWorld1(populations[0]),
+//     percentageOfWorld1(populations[1]),
+//     percentageOfWorld1(populations[2]),
+//     percentageOfWorld1(populations[3])
+// ];
+
+// const percentage2 = [];
+
+// for (let i = 0; i < populations.length; i++) {
+//     const perc = percentageOfWorld1(populations[i]);
+//     percentage2.push(perc);
+// }
+
+// console.log(percentage2);
+
+// const jonas = [
+//     'Jonas',
+//     'Joshi',
+//     2037 - 1982,
+//     'Coder',
+//     ['Michael', 'Peter', 'Steven']
+// ];
+
+// for (let count = jonas.length - 1; count >= 0; count--) {
+//     console.log(jonas[count]);
+// }
+
+// const listOfNeighbours = [
+//     ['Canada', 'Mexico'],
+//     ['Spain'],
+//     ['Norway', 'Sweden', 'Russia']
+// ];
+
+// for (let i = 0; i < listOfNeighbours.length; i++) {
+//     for (let j = 0; j < listOfNeighbours[i].length; j++) {
+//         console.log(`${listOfNeighbours[i][j]}`);
+//     }
+// }
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+let tips = [];
+let totals = [];
+
 function calcTip(billValue) {
     if (billValue >= 50 && billValue <= 300) {
         return billValue * 0.15;
@@ -146,12 +315,12 @@ function calcTip(billValue) {
     }
 }
 
-const bills = [125, 555, 44];
+for (let i = 0; i < bills.length; i++) {
+    tips.push(calcTip(bills[i]));
+    for (let j = 0; j < tips[i].length; j++) {
+        totals.push(tips[j] + bills[j]);
+    }
 
-const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
-console.log(tips);
-
-const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2],]
-console.log(total);
-
-console.log(tips[0], total[0], tips[1], total[1], tips[2], total[2]);
+}
+// console.log(tips);
+console.log(totals);
