@@ -253,14 +253,26 @@
 // }
 
 
+// function percentageOfWorld1(population) {
+//     const worldPopulation = 7900000000;
+//     const percentage = (population / worldPopulation) * 100;
+//     return percentage;
+// }
 
 // const populations = [1412979781, 335773639, 1412979781, 2412979781];
 
-// function percentageOfWorld1(population) {
-//     const worldPopulation = 7900000000;
-//     const percentage = (population / worldPopulation) * 100
-//     return (percentage);
+// const percentages3 = [];
+
+// let i = 0;
+// while (i < populations.length) {
+//     const perc = percentageOfWorld1(populations[i]);
+//     percentages3.push(perc);
+//     i++;
 // }
+
+// console.log(percentages3);
+
+
 
 // const percentages = [
 //     percentageOfWorld1(populations[0]),
@@ -302,25 +314,41 @@
 //     }
 // }
 
-const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
 
-let tips = [];
-let totals = [];
 
-function calcTip(billValue) {
-    if (billValue >= 50 && billValue <= 300) {
-        return billValue * 0.15;
-    } else {
-        return billValue * 0.2
-    }
-}
+// const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
 
-for (let i = 0; i < bills.length; i++) {
-    tips.push(calcTip(bills[i]));
-    for (let j = 0; j < tips[i].length; j++) {
-        totals.push(tips[j] + bills[j]);
-    }
+// const tips = [];
+// const totals = [];
 
-}
-// console.log(tips);
-console.log(totals);
+// function calcTip(billValue) {
+//     if (billValue >= 50 && billValue <= 300) {
+//         return billValue * 0.15;
+//     } else {
+//         return billValue * 0.2
+//     }
+// }
+
+// for (let i = 0; i < bills.length; i++) {
+//     //tips.push(calcTip(bills[i]));
+//     const tip = calcTip(bills[i]);
+//     tips.push(tip);
+//     totals.push(tip + bills[i]);
+//     // totals.push(calcTip(bills[i]) + bills[i]);
+// }
+
+
+// // console.log(tips);
+// console.log(bills, totals, tips);
+
+// function calcAverage(arr) {
+//     let sum = 0;
+//     let avg;
+//     for (let count = 0; count < arr.length; count++) {
+//         sum += arr[count];
+//     }
+//     avg = sum / arr.length;
+//     return avg;
+// }
+
+// console.log(calcAverage([1, 2, 3, 4]));
