@@ -11,7 +11,6 @@ const restaurant = {
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
-
   openingHours: {
     thu: {
       open: 12,
@@ -26,4 +25,122 @@ const restaurant = {
       close: 24,
     },
   },
+  order: function (starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
+
+  orderDelivery: function ({
+    starterIndex = 1,
+    mainIndex = 0,
+    time = '20:00',
+    address,
+  }) {
+    console.log(
+      `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
+    );
+  },
+
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(`Here is your delicious pasta with ${ing1}, ${ing2}, ${ing3}`);
+  },
+  // destrucring right here instead of calling obj
 };
+
+const arr = [7, 8, 9];
+
+const newArr = [1, 2, ...arr];
+// console.log(newArr);
+
+// console.log(...newArr);
+
+const newMenu = [...restaurant.mainMenu, 'Gnocchi'];
+// console.log(newMenu);
+
+//copy array
+const mainMenuCopy = [...restaurant.mainMenu];
+
+//join 2 arrays
+const Allmenu = [...restaurant.mainMenu, ...restaurant.starterMenu];
+console.log(Allmenu);
+
+//iterables are arrays,strings, maps, sets but NOT objects
+const str = 'Jonas';
+const letters = [...str, ' ', 's.'];
+console.log(letters);
+
+const ingredients = [
+  // prompt(`Let\'s make pasta Ingredient 1?`),
+  // prompt('ingredient2?'),
+  // prompt('ingredient 3'),
+];
+// console.log(ingredients);
+
+restaurant.orderPasta(...ingredients);
+
+//Objects
+const anotherNewRestaurant = {
+  foundedIn: 1988,
+  ...restaurant,
+  founder: 'Guiseppe',
+};
+console.log(anotherNewRestaurant);
+
+const restaurantCopy = { ...restaurant };
+restaurantCopy.name = 'Ristorante Roma';
+console.log(restaurantCopy.name);
+console.log(restaurant.name);
+
+restaurant.orderDelivery({
+  time: '22:30',
+  address: 'abc 21',
+  mainIndex: 2,
+  starterIndex: 2,
+});
+
+//Object destructuring
+const { name, openingHours, categories } = restaurant;
+// console.log(name, openingHours, categories);
+
+//variable names to be different than property names
+const {
+  name: restaurantName,
+  openingHours: hours,
+  categories: tags,
+} = restaurant;
+// console.log(restaurantName, hours, tags);
+
+//set default values
+const { menu = [], starterMenu: starters = [] } = restaurant;
+// console.log(menu, starters);
+
+//mutating variables while destructructuring objects
+let a = 111;
+let b = 999;
+const obj = { a: 23, b: 7, c: 14 };
+
+({ a, b } = obj);
+// console.log(a, b);
+
+//Nested object destructuring
+const {
+  fri: { open: o, close: c },
+} = openingHours;
+// console.log(o, c);
+
+//receive 2 return values from a function
+/* const [starter, main] = restaurant.order(2, 0);
+// console.log(starter, main);
+
+//Nested destructuring
+const nested = [2, 4, [5, 6]];
+
+// const [i, , j] = nested;
+// console.log(i, j);
+
+const [i, , [j, k]] = nested;
+console.log(i, j, k);
+
+//default values
+const [p = 1, q = 1, r = 1] = [8, 9];
+console.log(p, q, r);
+ */
